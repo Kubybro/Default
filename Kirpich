@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main() {
+  int a;
+  int b;
+  int c;
+  int d;
+  int e;
+
+  std::cout << "Введите размеры кирпича \n";
+  std::cin >> a >> b >> c;
+  std::cout << "Введите размер дыры \n";
+  std::cin >> d >> e;
+
+  if (a <= d && b <= e || a <= e && b <= d) {
+    std::cout << "Good";
+  } else if (a <= d && c <= e || a <= e && c <= d){
+    std::cout << "Good";
+  } else if (b <= d && c <= e || b <= e && c <= d){
+    std::cout << "Good";
+  } else {
+    std::cout << "you are mudak";
+  }
+}
