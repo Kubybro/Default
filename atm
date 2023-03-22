@@ -1,0 +1,46 @@
+#include <iostream>
+
+int main() {
+  int a;
+  std::cout << "Введите сумму: ";
+  std::cin >> a;
+  int fivethousand;
+  int twothousand;
+  int onek;
+  int fivehund;
+  int twohund;
+  int onehund;
+
+  
+  if (a > 150000) {
+    std::cout << "Не могу дать больше 150 000.";
+  } else if (a % 100 != 0 || a < 100) {
+    std::cout << "У меня нет мелочи\n";
+    a = a - (a % 100);
+  } 
+  if (a >= 5000) {
+    fivethousand = a / 5000;
+    a = a % 5000;
+    std::cout << "Нужно выдать " << fivethousand << " купюр 5000\n";
+  } if (a >= 2000) {
+    twothousand = a / 2000;
+    a = a % 2000;
+    std::cout << "Нужно выдать " << twothousand << " купюр 2000\n";
+  } if (a >= 1000) {
+    onek = a / 1000;
+    a = a % 1000;
+    std::cout << "Нужно выдать " << onek << " купюр 1000\n";
+  } if (a >= 500) {
+    fivehund = a / 500;
+    a = a % 500;
+    std::cout << "Нужно выдать " << fivehund << " купюр 500\n";
+  } if (a >= 200) {
+    twohund = a / 200;
+    a = a % 200;
+    std::cout << "Нужно выдать " << twohund << " купюр 200\n";
+  } if (a >= 100) {
+    onehund = a / 100;
+    a = a % 100;
+    std::cout << "Нужно выдать " << onehund << " купюр 100\n";
+  }
+}
