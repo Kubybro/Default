@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main() {
+  int a;
+  int b;
+  int c;
+  
+  std::cout << "Введите день мая и день недели с которого начинается месяц: \n";
+  std::cin >> a >> b;
+  b = b - 1;
+
+  int weekDay = (a + b + 7) % 7;
+  
+  if (weekDay >= (5 + b) && weekDay <= (7 + b) || weekDay == (0 + b)) {
+    std::cout << "Отдыхай";
+  } else if (a >= 1 && a <=5 || a >= 8 && a <= 10) {
+    std::cout << "Отдыхай";
+  } else {
+    std::cout << "опять работать";
+  }
+}
