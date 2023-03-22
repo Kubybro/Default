@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main() {
+  int a;
+  int b;
+  int c;
+  
+  std::cout << "Введите день мая: \n";
+  std::cin >> a;
+
+  int weekDay = (a + 7) % 7;
+  
+  if (weekDay >= 5 && weekDay <= 7 || weekDay == 0) {
+    std::cout << "Отдыхай";
+  } else if (a >= 1 && a <=5 || a >= 8 && a <= 10) {
+    std::cout << "Отдыхай";
+  } else {
+    std::cout << "опять работать";
+  }
+}
