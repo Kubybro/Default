@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+  int day;
+  int month;
+  int year;
+  int today;
+  int tMonth;
+  int tYear;
+
+  std::cout << "Введите дату рождения\n";
+  std::cin >> day >> month >> year;
+  std::cout << "Введите сегодняшнюю дату\n";
+  std::cin >> today >> tMonth >> tYear;
+
+  if (year < (tYear - 18)) {
+    std::cout << "Можно";
+  } else if (year == (tYear - 18) && month < tMonth) {
+    std::cout << "Можно";
+  } else if (year == (tYear - 18) && month == tMonth && day >= (today + 1)) {
+    std::cout << "МОжно";
+  } else {
+    std::cout << "Нельзя";
+  }
+}
