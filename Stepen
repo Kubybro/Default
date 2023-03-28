@@ -9,7 +9,7 @@ int main() {
   int result = 1;
 
   while (count != n) {
-    k = k * 2;
+    k *= k;
     count += 1;
     result = k;
   }
