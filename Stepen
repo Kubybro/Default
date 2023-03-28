@@ -1,0 +1,14 @@
+int main() {
+  int n;
+  int k;
+  std::cout << "Введите число и степень\n";
+  std::cin >> k >> n;
+  int count = 1;
+  
+  do {
+    k = k * 2;
+    count += 1;
+  } while (count != n);
+  
+  std::cout << k << "\n";
+}
