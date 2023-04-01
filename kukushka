@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main() {
+  int hour;
+  std::cout << "Введите часы: \n";
+  std::cin >> hour;
+
+  bool eblan = hour == 0 || hour < 0;
+  if (eblan) {
+    std::cout << "Введи правильно \n";
+    std::cin >> hour; 
+  }
+  
+  while (hour > 0) {
+    std::cout << "\nКу-ку " << hour;
+    hour -= 1;
+  }
+  
+}
