@@ -1,0 +1,26 @@
+#include <iostream>
+
+int main() {
+  int debt;
+  std::cout << "Введите число: \n";
+  std::cin >> debt;
+  bool paid = false;
+  int payment;
+
+  do {
+    std::cout << "Внесите бабки: ";
+    std::cin >> payment;
+    if (payment <= 0) {
+      std::cout << "Введи нормально: ";
+      std::cin >> payment;
+    }
+    paid = debt - payment <= 0;
+    debt -= payment;
+  } while (!paid && debt != payment);
+
+  debt = abs (debt);
+
+  
+  
+  std::cout << "погашено. На счету: " << debt;
+}
