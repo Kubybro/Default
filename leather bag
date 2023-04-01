@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main() {
+  int number;
+  std::cout << "Введите число: \n";
+  std::cin >> number;
+  int something = 0; 
+  int score = 0;
+  
+  while (number != 0) {
+    something = number % 10;
+    if (something != 1 && something != 0) ++score;
+    if (score > 0) break;
+    number /= 10;
+  }
+  
+  if (score == 0) {
+    std::cout << "все ок";
+  } else {
+    std::cout << "не понятно";
+  }
+}
